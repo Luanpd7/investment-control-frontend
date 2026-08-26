@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../data/repositories/investment_record_impl.dart';
 import '../domain/entities/investiment_record.dart';
@@ -147,7 +148,6 @@ class DashboardState with ChangeNotifier {
       ),
     );
 
-    print('---------------${record}');
     var result = await useCase.saveInvestmentRecord(record: record);
 
     return result;
@@ -776,76 +776,92 @@ void showInvestmentModal(
 }) {
   modalCustomized(
     context,
-    content: Column(
-      spacing: 20,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              style: AppTextStyles.label.copyWith(
-                color: Colors.black,
-                fontSize: 16,
+    content: KeyboardListener(
+      focusNode: FocusNode(),
+      autofocus: true,
+      onKeyEvent: (event) async {
+        if (event is KeyDownEvent &&
+            event.logicalKey == LogicalKeyboardKey.enter) {
+          await _saveInvestment(
+            context,
+            id: id,
+            state: state,
+            successMessage: successMessage,
+            errorMessage: errorMessage,
+          );
+        }
+      },
+      child: Column(
+        spacing: 20,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: AppTextStyles.label.copyWith(
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
               ),
-            ),
-            Text(subtitle, style: AppTextStyles.subtitle),
-          ],
-        ),
+              Text(subtitle, style: AppTextStyles.subtitle),
+            ],
+          ),
 
-        TextFormCustomized(
-          controller: state.emergency,
-          label: 'Reserva de emergência (R\$)',
-        ),
+          TextFormCustomized(
+            controller: state.emergency,
+            label: 'Reserva de emergência (R\$)',
+          ),
 
-        TextFormCustomized(
-          controller: state.fixedIncome,
-          label: 'Renda fixa (R\$)',
-        ),
+          TextFormCustomized(
+            controller: state.fixedIncome,
+            label: 'Renda fixa (R\$)',
+          ),
 
-        TextFormCustomized(
-          controller: state.variableIncome,
-          label: 'Renda variável (R\$)',
-        ),
+          TextFormCustomized(
+            controller: state.variableIncome,
+            label: 'Renda variável (R\$)',
+          ),
 
-        TextFormCustomized(
-          controller: state.contribution,
-          label: 'Aportes mensais (R\$)',
-        ),
+          TextFormCustomized(
+            controller: state.contribution,
+            label: 'Aportes mensais (R\$)',
+          ),
 
-        const SizedBox(height: 1),
+          const SizedBox(height: 1),
 
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          spacing: 15,
-          children: [
-            ButtonCustomized(
-              secondary: true,
-              onPressed: () {
-                state.cleanFields();
-                Navigator.pop(context);
-              },
-              label: 'Voltar',
-              icon: Icons.arrow_back_outlined,
-            ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            spacing: 15,
+            children: [
+              ButtonCustomized(
+                secondary: true,
+                onPressed: () {
+                  state.cleanFields();
+                  Navigator.pop(context);
+                },
+                label: 'Voltar',
+                icon: Icons.arrow_back_outlined,
+              ),
 
-            ButtonCustomized(
-              onPressed: () async {
-                await _saveInvestment(
-                  context,
-                  id: id,
-                  state: state,
-                  successMessage: successMessage,
-                  errorMessage: errorMessage,
-                );
-              },
-              label: 'Salvar',
-              icon: Icons.save_outlined,
-            ),
-          ],
-        ),
-      ],
+              ButtonCustomized(
+                onPressed: () async {
+                  await _saveInvestment(
+                    context,
+                    id: id,
+                    state: state,
+                    successMessage: successMessage,
+                    errorMessage: errorMessage,
+                  );
+                },
+                label: 'Salvar',
+                icon: Icons.save_outlined,
+              ),
+            ],
+          ),
+        ],
+      ),
     ),
   );
 }
