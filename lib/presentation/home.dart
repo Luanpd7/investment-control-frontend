@@ -94,7 +94,7 @@ class DashboardState with ChangeNotifier {
       loading = true;
       notifyListeners();
       dataDashboard = await useCase.dataDashboard(filter);
-      callGetAllInvestmentRecord();
+      await  callGetAllInvestmentRecord();
       assetsGrowth = await useCase.assetGrowth(filter);
       categoryGrowth = await useCase.categoryGrowth(filter);
       availableYears = await useCase.availableYears();
