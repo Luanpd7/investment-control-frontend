@@ -44,3 +44,17 @@ financial-independence/
 ├── handlers/
 │
 └── routes/
+```
+## 🔌 Endpoints
+
+A API disponibiliza os seguintes endpoints:
+
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `POST` | `/saveInvestment` | Salva um novo registro de investimento |
+| `GET` | `/getAllInvestment` | Retorna todos os registros de investimentos |
+| `GET` | `/dataDashboard` | Retorna os dados utilizados no dashboard |
+| `GET` | `/assetGrowth` | Retorna os dados de crescimento do patrimônio |
+| `GET` | `/categoryGrowth` | Retorna o crescimento dos investimentos por categoria |
+| `GET` | `/availableYears` | Retorna os anos disponíveis nos registros |
+| `GET` | `/lastInvestmentRecord` | Retorna o último registro de investimento |
