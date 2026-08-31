@@ -1,16 +1,46 @@
-# controle_investimento
+# 💰 Controle de investimento
 
-A new Flutter project.
+API REST desenvolvida em Go para gerenciamento e acompanhamento de
+investimentos e patrimônio financeiro.
 
-## Getting Started
+## 🚀 Tecnologias
 
-This project is a starting point for a Flutter application.
+- Go
+- Gin
+- PostgreSQL
+- REST API
+- Clean Architecture
+- Git
 
-A few resources to get you started if this is your first Flutter project:
+## 📋 Funcionalidades
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Cadastro de registros de investimentos
+- Consulta do patrimônio
+- Consulta do histórico de investimentos
+- Filtro por ano e mês
+- Cálculo de variação do patrimônio
+- Consulta por categoria de investimento
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🏗️ Arquitetura
+
+O projeto utiliza Clean Architecture para separar as responsabilidades
+da aplicação.
+
+```text
+financial-independence/
+│
+├── data/
+│   ├── database/
+│   │
+│   └── repository/     
+│
+├── domain/
+│   ├── entities/
+│   │
+│   ├── repositories/
+│   │
+│   └── usecase/
+│
+├── handlers/
+│
+└── routes/
