@@ -56,7 +56,7 @@ O front-end se comunica com uma API REST desenvolvida em **Go + Gin**, responsá
 
 ### Back-end
 
-[Link para o repositório do back-end]
+[https://github.com/Luanpd7/investment-control-backend-]
 
 Principais endpoints utilizados:
 
