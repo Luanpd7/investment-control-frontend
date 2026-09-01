@@ -6,13 +6,13 @@ Este projeto é o **front-end** da aplicação e se comunica com uma API REST de
 
 ## 🚀 Tecnologias
 
-* Flutter
-* Dart
-* Provider
-* Dio
-* REST API
-* Clean Architecture
-* Git
+- **Flutter:** utilizado para desenvolvimento da interface da aplicação.
+- **Dart:** linguagem utilizada no desenvolvimento do aplicativo Flutter.
+- **Provider:** utilizado para gerenciamento de estado da aplicação.
+- **Dio:** utilizado para realizar requisições HTTP e comunicação com a API.
+- **REST API:** utilizada para comunicação entre o front-end e o back-end.
+- **Clean Architecture:** utilizada para organização do código e separação de responsabilidades.
+- **Git:** utilizado para controle de versão e gerenciamento das alterações do projeto.
 
 ## 📋 Funcionalidades
 
