@@ -4,13 +4,15 @@ import '../../domain/entities/investiment_record.dart';
 import '../../domain/repositories/investiment_record_repository.dart';
 
 class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
+
+  var addressUrl = 'http://54.20.126.248:8080/';
   @override
   Future<List<InvestmentRecord>> getAllInvestmentRecord(
     String? filter,
     bool ascending,
   ) async {
     try {
-      var url = 'http://localhost:8080/getAllInvestment?ascending=$ascending';
+      var url = '${addressUrl}getAllInvestment?ascending=$ascending';
 
       if (filter != null) {
         url += '&filter=$filter';
@@ -39,7 +41,7 @@ class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
   Future<bool> saveInvestmentRecord({required InvestmentRecord record}) async {
     try {
       final response = await http.post(
-        Uri.parse('http://localhost:8080/saveInvestment'),
+        Uri.parse('${addressUrl}saveInvestment'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(record.toJson()),
       );
@@ -59,7 +61,7 @@ class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
   @override
   Future<InvestmentRecord> dataDashboard(String? filter) async {
     try {
-      var url = 'http://localhost:8080/dataDashboard';
+      var url = '${addressUrl}dataDashboard';
 
       if (filter != null) {
         url += '?filter=$filter';
@@ -85,7 +87,7 @@ class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
   @override
   Future<List<AssetsGrowth>> assetGrowth(String? filter) async {
     try {
-      var url = 'http://localhost:8080/assetGrowth';
+      var url = '${addressUrl}assetGrowth';
 
       if (filter != null) {
         url += '?filter=$filter';
@@ -113,7 +115,7 @@ class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
   @override
   Future<List<CategoryGrowth>> categoryGrowth(String? filter) async {
     try {
-      var url = 'http://localhost:8080/categoryGrowth';
+      var url = '${addressUrl}categoryGrowth';
 
       if (filter != null) {
         url += '?filter=$filter';
@@ -143,7 +145,7 @@ class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
   @override
   Future<List<int>> availableYears() async {
     try {
-      var url = 'http://localhost:8080/availableYears';
+      var url = '${addressUrl}availableYears';
 
       final response = await http.get(
         Uri.parse(url),
@@ -167,7 +169,7 @@ class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
   @override
   Future<InvestmentRecord?> getLastInvestmentRecord() async {
     try {
-      var url = 'http://localhost:8080/lastInvestmentRecord';
+      var url = '${addressUrl}lastInvestmentRecord';
 
       final response = await http.get(
         Uri.parse(url),
