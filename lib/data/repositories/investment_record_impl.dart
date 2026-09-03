@@ -5,7 +5,7 @@ import '../../domain/repositories/investiment_record_repository.dart';
 
 class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
 
-  var addressUrl = 'http://54.20.126.248:8080/';
+  var addressUrl = 'http://56.125.232.166:8080/';
   @override
   Future<List<InvestmentRecord>> getAllInvestmentRecord(
     String? filter,
