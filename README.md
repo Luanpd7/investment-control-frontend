@@ -82,5 +82,5 @@ Principais endpoints utilizados:
 ## ☁️ Arquitetura da Aplicação
 
 <p align="center">
-  <img src="docs/architecture.png" alt="Arquitetura da Aplicação" width="900"/>
+  <img src="https://chatgpt.com/s/m_6a9abd17f5548191b86b366f8c083198" alt="Arquitetura da Aplicação" width="900"/>
 </p>
