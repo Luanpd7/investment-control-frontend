@@ -81,6 +81,6 @@ Principais endpoints utilizados:
 
 ## ☁️ Arquitetura da Aplicação
 
-<p align="center">
-  <img src=""C:\Users\luan0\Downloads\fluxo-projeto.png"" alt="Arquitetura da Aplicação" width="900"/>
-</p>
+Flutter Web 
+    │ 
+    │ Dio / HTTPS ▼ Cloudflare Tunnel │ ▼ Go REST API AWS EC2 │ │ PostgreSQL ▼ AWS RDS
