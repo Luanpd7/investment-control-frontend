@@ -6,6 +6,8 @@ O projeto permite registrar e acompanhar a evolução do patrimônio ao longo do
 
 Este repositório contém o front-end da aplicação, que consome uma API REST desenvolvida em Go (Golang).
 
+- **[Ver publicação no LinkedIn](https://www.linkedin.com/posts/luan-pereira-dias-a327a0253_esse-projeto-web-foi-desenvolvido-inicialmente-activity-7498019662534914049-snNJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6WM8YBZpZBcOFJu9kQqXyrUpV5Vaoz8g4)**
+
 ## 🚀 Tecnologias
 
 - **Flutter:** utilizado para desenvolvimento da interface da aplicação.
