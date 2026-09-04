@@ -102,3 +102,29 @@ AWS RDS
 - **Cloudflare Tunnel:** fornece uma conexão HTTPS segura entre o front-end e o back-end.
 - **AWS EC2:** hospeda e executa a API REST desenvolvida em **Go + Gin**.
 - **AWS RDS:** hospeda o banco de dados **PostgreSQL**, responsável pela persistência dos dados.
+
+## 🎯 Objetivo do Projeto
+
+O projeto foi desenvolvido com o objetivo de aplicar e aprimorar conhecimentos em desenvolvimento **Full Stack e Cloud**, integrando front-end, back-end, banco de dados e infraestrutura em nuvem.
+
+Além do desenvolvimento da aplicação, o projeto também teve como objetivo colocar em prática conhecimentos de **AWS**, realizando o deploy e a configuração da infraestrutura necessária para executar a aplicação em ambiente de nuvem.
+
+Durante o desenvolvimento e deploy foram aplicados conceitos como:
+
+- Desenvolvimento de APIs REST com **Go + Gin**
+- **Clean Architecture**
+- **PostgreSQL**
+- Deploy de aplicações Go em **Amazon EC2**
+- Hospedagem do PostgreSQL no **Amazon RDS**
+- Configuração de **VPC**
+- Utilização de **subnets públicas e privadas**
+- Configuração de **Security Groups**
+- Comunicação entre **EC2 e RDS**
+- Configuração de regras de entrada e saída de rede
+- Utilização de **Internet Gateway e Route Tables**
+- Acesso e gerenciamento de instâncias EC2 via **SSH**
+- Configuração de variáveis de ambiente no servidor
+- Utilização do **Cloudflare Tunnel** para disponibilização da API via HTTPS
+- Integração entre **Flutter Web, API REST e infraestrutura AWS**
+
+Dessa forma, o projeto também serviu como ambiente prático para compreender como uma aplicação pode ser **implantada, configurada e executada na AWS**, abrangendo conceitos de infraestrutura, rede, segurança e computação em nuvem.
