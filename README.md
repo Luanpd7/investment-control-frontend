@@ -79,8 +79,26 @@ Principais endpoints utilizados:
 | `GET`  | `/availableYears`       | Retorna os anos disponíveis            |
 | `GET`  | `/lastInvestmentRecord` | Retorna o último registro              |
 
-## ☁️ Arquitetura da Aplicação
+## ☁️ Fluxo de Comunicação
 
-Flutter Web 
-    │ 
-    │ Dio / HTTPS ▼ Cloudflare Tunnel │ ▼ Go REST API AWS EC2 │ │ PostgreSQL ▼ AWS RDS
+```text
+Flutter Web
+     │
+     │ Dio / HTTPS
+     ▼
+Cloudflare Tunnel
+     │
+     ▼
+Go REST API
+AWS EC2
+     │
+     │ PostgreSQL
+     ▼
+AWS RDS
+```
+
+- **Flutter Web:** interface da aplicação responsável pela interação com o usuário.
+- **Dio / HTTPS:** realiza as requisições HTTP para a API.
+- **Cloudflare Tunnel:** fornece uma conexão HTTPS segura entre o front-end e o back-end.
+- **AWS EC2:** hospeda e executa a API REST desenvolvida em **Go + Gin**.
+- **AWS RDS:** hospeda o banco de dados **PostgreSQL**, responsável pela persistência dos dados.
