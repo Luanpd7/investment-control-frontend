@@ -16,7 +16,8 @@ Este repositório contém o front-end da aplicação, que consome uma API REST d
 - **Clean Architecture:** utilizada para organização do código e separação de responsabilidades.
 - **Git:** utilizado para controle de versão e gerenciamento das alterações do projeto.
 - **Vercel:** hospedagem do front-end web.
-- 
+- **JIRA:** Para organização nas demandas.
+  
 ## 📋 Funcionalidades
 
 * Dashboard com indicadores financeiros
