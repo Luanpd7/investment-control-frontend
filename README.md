@@ -2,7 +2,9 @@
 
 Aplicação web desenvolvida em Flutter para gerenciamento e acompanhamento de investimentos e patrimônio financeiro.
 
-Este projeto é o **front-end** da aplicação e se comunica com uma API REST desenvolvida em Go.
+O projeto permite registrar e acompanhar a evolução do patrimônio ao longo do tempo, separando os investimentos entre reserva de emergência, renda fixa e renda variável, além de disponibilizar indicadores e gráficos para análise.
+
+Este repositório contém o front-end da aplicação, que consome uma API REST desenvolvida em Go (Golang).
 
 ## 🚀 Tecnologias
 
@@ -13,11 +15,11 @@ Este projeto é o **front-end** da aplicação e se comunica com uma API REST de
 - **REST API:** utilizada para comunicação entre o front-end e o back-end.
 - **Clean Architecture:** utilizada para organização do código e separação de responsabilidades.
 - **Git:** utilizado para controle de versão e gerenciamento das alterações do projeto.
-
+- **Vercel:** hospedagem do front-end web.
+- 
 ## 📋 Funcionalidades
 
-* Visualização do patrimônio total
-* Visualização da reserva de emergência
+* Dashboard com indicadores financeiros
 * Acompanhamento de renda fixa
 * Acompanhamento de renda variável
 * Cadastro de registros de investimentos
@@ -52,8 +54,15 @@ lib/
 
 ## 🔌 Integração com o Back-end
 
-O front-end se comunica com uma API REST desenvolvida em **Go + Gin**, responsável pelo gerenciamento dos dados de investimentos.
+O front-end consome uma API REST desenvolvida utilizando:
 
+* Go (Golang)
+* Gin
+* PostgreSQL
+* Clean Architecture
+* Amazon EC2
+* Amazon RDS
+  
 ### Back-end
 
 [https://github.com/Luanpd7/investment-control-backend-]
@@ -70,3 +79,8 @@ Principais endpoints utilizados:
 | `GET`  | `/availableYears`       | Retorna os anos disponíveis            |
 | `GET`  | `/lastInvestmentRecord` | Retorna o último registro              |
 
+## ☁️ Arquitetura da Aplicação
+
+<p align="center">
+  <img src="docs/architecture.png" alt="Arquitetura da Aplicação" width="900"/>
+</p>
