@@ -6,7 +6,7 @@ import '../../domain/repositories/investiment_record_repository.dart';
 class InvestmentRecordRepositoryImpl implements InvestmentRecordRepository {
 
   var addressUrl =
-      'https://suffered-jumping-rooms-reed.trycloudflare.com';
+      'https://suffered-jumping-rooms-reed.trycloudflare.com/';
 
   @override
   Future<List<InvestmentRecord>> getAllInvestmentRecord(
